@@ -33,6 +33,7 @@
 
 .music-header {
     color: #000; 
+    font-family: 'Patua One', cursive;
 }
 
 .desc-music {
@@ -43,6 +44,7 @@
 
 .upcoming-header {
     color: #000; 
+    font-family: 'Patua One', cursive;
 }
 
 .music-image {
