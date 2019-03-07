@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import { doEditEvents } from '../Firebase/Events'
 
 import { withRouter } from 'react-router-dom'
 
-import { doCreateEvent } from '../Firebase/Events'
-import './NewEvent.css'
+import './EditPage.css'
 
 
 class NewEvent extends Component {
@@ -26,7 +26,7 @@ class NewEvent extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        doCreateEvent(this.state)
+        doEditEvents(this.state)
             .then(snapShot => console.log(snapShot))
             this.props.history.push("/")
     }
