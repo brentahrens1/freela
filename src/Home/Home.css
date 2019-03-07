@@ -1,0 +1,37 @@
+.home-banner {
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 2rem; 
+    font-family: 'Patua One', cursive;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-btn {
+    text-transform: uppercase; 
+    position: absolute;
+    padding: 1rem; 
+    font-family: 'Patua One', cursive;
+    border-radius: 2rem; 
+    font-size: 1rem; 
+    background-color: #71A336; 
+    color: #fff; 
+    border: 0 solid #71A336; 
+    width: 10rem; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none; 
+}
+ 
+
+.home-image {
+    width: 100%; 
+}
+
+.home-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}

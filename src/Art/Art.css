@@ -1,0 +1,21 @@
+.art-image {
+    width: 100%; 
+}
+
+.art-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 50%; 
+    margin-left: .5rem; 
+}
+
+.art-banner {
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 4rem; 
+    font-family: 'Patua One', cursive;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

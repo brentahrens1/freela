@@ -1,0 +1,20 @@
+.nav-list {
+    list-style-type: none;
+}
+
+.list-item {
+    display: flex; 
+    justify-content: space-around; 
+    font-family: 'Patua One', cursive;
+}
+
+.list-item a{
+    text-decoration: none; 
+    font-family: 'Patua One', cursive;
+    color: #000; 
+}
+
+.list-item a:visited {
+    color: #000; 
+}
+

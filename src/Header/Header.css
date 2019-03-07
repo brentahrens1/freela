@@ -1,0 +1,20 @@
+.top-header {
+    font-size: 4rem; 
+    font-family: 'Chewy', cursive;
+    margin-top: 0; 
+    margin-bottom: 0; 
+    color: #000; 
+}
+
+.header-container a {
+    text-decoration: none; 
+}
+
+.header-img {
+    height: 5rem; 
+}
+
+.header-flex {
+    display: flex; 
+    justify-content: center; 
+}
