@@ -16,6 +16,7 @@ import Nature from './Nature/Nature'
 import Exercise from './Exercise/Exercise'
 import Art from './Art/Art'
 import NewEvent from './NewEvent/NewEvent'
+import EditEvent from './EditPage/EditPage'
 
 class App extends Component {
 
@@ -58,6 +59,7 @@ class App extends Component {
           <Route exact path="/exercise" component={() => <Exercise/>}/>
           <Route exact path="/art" component={() => <Art/>}/>
           <Route exact path="/newevent" component={() => <NewEvent/>}/>
+          <Route exact path="/event/:id/edit" component={() => <EditEvent/>}/>
         </Switch>
       </div>
     );

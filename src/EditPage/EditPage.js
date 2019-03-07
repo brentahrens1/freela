@@ -1,58 +1,68 @@
 import React, { Component } from 'react';
-import { doEditEvents } from '../Firebase/Events'
+import { doEditEvents, doGetOneEvent } from '../Firebase/Events'
 
 import { withRouter } from 'react-router-dom'
 
 import './EditPage.css'
 
 
-class NewEvent extends Component {
+class EditEvent extends Component {
 
     state = {
-        name: "",
-        category: "",
-        img: "",
-        description: "",
-        date: "",
-        address: ""
+        event: {}
     }
 
-    handleInput(e) {
+    componentDidMount() {
+        console.log(this.props.match.params.id)
+        doGetOneEvent(this.props.match.params.id) 
+            .then(snapShot => {
+                this.setState({
+                    event: snapShot.data()
+                })
+            }) 
+    }
+
+
+
+    handleInput=(e) =>{
+        
         this.setState({
-            ...this.state,
-            [e.target.name]:e.target.value
+             event: {
+                 ...this.state.event, 
+                [e.target.name]: e.target.value
+            }
         })
     }
 
-    handleSubmit = async (e) => {
+    handleSubmit = (e) => {
+        console.log('click')
         e.preventDefault();
-        doEditEvents(this.state)
+        doEditEvents(this.state.event, this.props.match.params.id)
             .then(snapShot => console.log(snapShot))
-            this.props.history.push("/")
+            this.props.history.push(`/${this.state.event.category}`)
     }
     
 
     render() {
-        const { name, category, date, description, address, img} = this.state
+        const { name, category, date, description, address, img } = this.state.event
         return(
-            <div className="event-container">
+            <div className="edit-container">
                 <form className="input-flex" onSubmit={this.handleSubmit}>
                     <h1>Select Category</h1>
-                    <select className="select-menu" name='category' onChange={this.handleInput.bind(this)}>
+                    <select className="select-menu" name='category' onChange={this.handleInput}>
                         <option>----</option>
                         <option>Music</option>
                         <option>Nature</option>
                         <option>Exercise</option>
                         <option>Art</option>
                     </select>
-                    <input className="input1" onChange={this.handleInput.bind(this)} type="text" name="name" placeholder="name" value={name}/>
-                    <input className="input2" onChange={this.handleInput.bind(this)} type="text" name="img" placeholder="picture" value={img}/>
-                    <input className="input3" onChange={this.handleInput.bind(this)} type="text" name="category" placeholder="category" value={category}/>
-                    {/* <input className="input3" onChange={this.handleInput.bind(this)} type="text" name="category" placeholder="category" value={category}/> */}
-                    <input className="input4" onChange={this.handleInput.bind(this)} type="text" name="date" placeholder="date" value={date}/>
-                    <input className="input5" onChange={this.handleInput.bind(this)} type="text" name="description" placeholder="description" value={description}/>
-                    <input className="input6" onChange={this.handleInput.bind(this)} type="text" name="address" placeholder="address" value={address}/>
-                    <button className="newevent-btn" type="submit">Create Event</button>
+                    <input className="input1" onChange={this.handleInput} type="text" name="name" placeholder="name" defaultValue={name}/>
+                    <input className="input2" onChange={this.handleInput} type="text" name="img" placeholder="picture" defaultValue={img}/>
+                    <input className="input3" onChange={this.handleInput} type="text" name="category" placeholder="category" defaultValue={category}/>
+                    <input className="input4" onChange={this.handleInput} type="text" name="date" placeholder="date" defaultValue={date}/>
+                    <input className="input5" onChange={this.handleInput} type="text" name="description" placeholder="description" defaultValue={description}/>
+                    <input className="input6" onChange={this.handleInput} type="text" name="address" placeholder="address" defaultValue={address}/>
+                    <button className="edit-btn" type="submit">Submit</button>
                 </form>
             </div>
         )
@@ -60,4 +70,4 @@ class NewEvent extends Component {
 }
 
 
-export default withRouter(NewEvent)
+export default withRouter(EditEvent)

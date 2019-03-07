@@ -10,6 +10,7 @@ export const doGetMusicEvents = () =>
     eventsRef
         .where('category', '==', 'Music')
         .get()
+        .then(snapShot => snapShot.docs.map(d => Object.assign(d.data(), {uid: d.id})))
 
 export const doGetNatureEvents = () =>
     eventsRef
@@ -26,26 +27,13 @@ export const doGetArtEvents = () =>
         .where('category', '==', 'Art')
         .get()
 
-export const doEditEvents = (data) =>
+export const doEditEvents = (data, id) =>
     eventsRef
-        .add(data)
+        .doc(id)
+        .update(data)
 
-export const doEditMusicEvents = () =>
-    eventsRef
-        .where('category', '==', 'Music')
-        .get()
 
-export const doEditNatureEvents = () =>
+export const doGetOneEvent = (id) =>
     eventsRef
-        .where('category', '==', 'Nature')
-        .get()
-
-export const doEditExerciseEvents = () =>
-    eventsRef
-        .where('category', '==', 'Exercise')
-        .get()
-
-export const doEditArtEvents = () =>
-    eventsRef
-        .where('category', '==', 'Art')
+        .doc(id)
         .get()
