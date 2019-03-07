@@ -39,6 +39,7 @@ class Login extends Component {
         return(
             <div className="login-container">
                 <form className="login-flex" onSubmit={this.handleSubmit}>
+                <h1 className="login-header">Log in</h1>
                     <input className="input1"
                         type="email"
                         name="email"

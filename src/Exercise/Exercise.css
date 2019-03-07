@@ -1,16 +1,11 @@
-.exercise-image {
-    width: 100%; 
-}
-
 .exercise-container {
-    position: relative;
     text-align: center;
     color: white;
-    width: 50%; 
     margin-left: .5rem; 
+    margin-top: 1rem; 
 }
 
-.exercise-banner {
+/* .exercise-banner {
     text-transform: uppercase;
     position: absolute;
     font-size: 4rem; 
@@ -18,4 +13,42 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+} */
+
+.exercise-flex {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-evenly; 
+}
+
+.exercise-banner-flex {
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+.desc-flex {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.exercise-header {
+    color: #000; 
+    font-family: 'Patua One', cursive;
+}
+
+.desc-exercise {
+    color: #000; 
+    width: 30rem; 
+    margin-left: 1rem; 
+}
+
+.upcoming-header {
+    color: #000; 
+    font-family: 'Patua One', cursive;
+}
+
+.exercise-image {
+    margin-bottom: 2rem; 
+    width: 47rem; 
+    height: 30rem; 
 }

@@ -37,7 +37,7 @@ class NewEvent extends Component {
         return(
             <div className="event-container">
                 <form className="input-flex" onSubmit={this.handleSubmit}>
-                    <h1>New Event</h1>
+                    <h1>Select Category</h1>
                     <select className="select-menu" name='category' onChange={this.handleInput.bind(this)}>
                         <option>Music</option>
                         <option>Nature</option>

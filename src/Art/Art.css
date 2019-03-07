@@ -1,16 +1,11 @@
-.art-image {
-    width: 100%; 
-}
-
 .art-container {
-    position: relative;
     text-align: center;
     color: white;
-    width: 50%; 
     margin-left: .5rem; 
+    margin-top: 1rem; 
 }
 
-.art-banner {
+/* .art-banner {
     text-transform: uppercase;
     position: absolute;
     font-size: 4rem; 
@@ -18,4 +13,42 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+} */
+
+.art-flex {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-evenly; 
+}
+
+.art-banner-flex {
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+.desc-flex {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.art-header {
+    color: #000; 
+    font-family: 'Patua One', cursive;
+}
+
+.desc-art {
+    color: #000; 
+    width: 30rem; 
+    margin-left: 1rem; 
+}
+
+.upcoming-header {
+    color: #000; 
+    font-family: 'Patua One', cursive;
+}
+
+.art-image {
+    margin-bottom: 2rem; 
+    width: 47rem; 
+    height: 30rem; 
 }
