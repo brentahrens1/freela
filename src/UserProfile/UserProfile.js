@@ -10,8 +10,8 @@ class UserProfile extends Component {
 
     state = {
         events: [],
-        userImg: "a test",
-        userBio: "some words",
+        userImg: this.props.currentUser.userImg ||"http://profilepicturesdp.com/wp-content/uploads/2018/07/profile-pictures-icon-4.jpg",
+        userBio: this.props.currentUser.userBio,
         showEditForm: false
     }
 
@@ -43,11 +43,14 @@ class UserProfile extends Component {
         e.preventDefault()
         const { userImg, userBio} = this.state
         const userBioObj = { 
+            ...this.props.currentUser,
             userImg,
             userBio
         }
         console.log(userBioObj )
         doUpdateUserInfo(this.props.currentUser.uid, userBioObj)
+            .then(snapShot => this.props.doSetCurrrentUser(userBioObj))
+
     }
 
     handleInput = (e) => {
@@ -65,13 +68,19 @@ class UserProfile extends Component {
                 {
                     this.state.showEditForm
                         ? <EditProfileForm 
+                            currentUser={this.props.currentUser}
                             handleInput={this.handleInput} 
                             showProfile={() => this.setState({showEditForm: !this.state.showEditForm})}
                             addBio={this.addBio}
                             />
                         : <div>
-                            <img src={this.props.currentUser.userImg} alt="profile-pic"/>
-                            <p>{this.props.currentUser.userBio}</p>
+                            <div className="profileinfo-container">
+                                <h1 className="profile-header">{this.props.currentUser.username}</h1>
+                                <img className="profile-img" src={this.props.currentUser.userImg} alt="profile-pic"/>
+                                <p className="profile-description">{this.props.currentUser.userBio}</p>
+                                <button className="profileedit-btn" onClick={() => this.setState({showEditForm: !this.state.showEditForm})}>Edit Profile</button>
+                            </div>
+                            <hr/>
                             <h1 className="profile-header">Your upcoming events</h1>
                             <div className="profile-flex">
                             {
@@ -95,8 +104,6 @@ class UserProfile extends Component {
                             }
 
                             </div>
-                            <button onClick={() => this.setState({showEditForm: !this.state.showEditForm})}>show form</button>
-                            <button onClick={this.addBio}>add button</button>
                         </div>
                 }
             </div>
@@ -109,7 +116,7 @@ class UserProfile extends Component {
 
 
 
-const EditProfileForm = ({showProfile, handleInput, addBio}) =>
+const EditProfileForm = ({showProfile, handleInput, addBio, currentUser}) =>
     <div>
         <form onSubmit={e => addBio(e)}>
             <h1 className="edituser-header">User Profile</h1>
@@ -117,12 +124,14 @@ const EditProfileForm = ({showProfile, handleInput, addBio}) =>
                 type="text"
                 name="userImg"
                 placeholder="profile pic"
+                defaultValue={currentUser.userImg}
                 onChange={e => handleInput(e)}
             />
             <input className="input1"
                 type="text"
                 name="userBio"
                 placeholder="Bio"
+                defaultValue={currentUser.userBio}
                 onChange={e => handleInput(e)}
             />
             <button type="submit">Submit</button>
