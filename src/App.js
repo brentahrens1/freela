@@ -80,7 +80,7 @@ class App extends Component {
           <Route exact path="/nature" component={() => <Nature currentUser={this.state.currentUser} />}/>}/>
           <Route exact path="/exercise" component={() => <Exercise currentUser={this.state.currentUser} />}/>}/>
           <Route exact path="/art" component={() => <Art currentUser={this.state.currentUser} />}/>}/>
-          <Route exact path="/newevent" component={() => <NewEvent/>}/>
+          <Route exact path="/newevent" component={() => <NewEvent currentUser={this.state.currentUser}/>}/>
           <Route exact path="/event/:id/edit" component={() => <EditEvent/>}/>
           <Route exact path="/profile/:id" component={() => <UserProfile currentUser={this.state.currentUser}/>}/>
         </Switch>

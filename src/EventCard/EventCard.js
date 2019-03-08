@@ -14,18 +14,32 @@ class EventCard extends Component {
       const { event } = this.props
         return(
           <div className="cards__item">
-          <div className="card">
-            <img className="card__image card__image--fence" alt="eventimg" src={event.img}/>
-            <div className="card__content">
-              <div className="card__title">{event.name}</div>
-              <div className="card__title">{event.date}</div>
-              <p className="card__text">{event.description}</p>
-              <h3 className="card__text">{event.address}</h3>
-              <button className="btn btn--block card__btn" onClick={this.doAddEvent}>Save This Event</button>
-              <Link to={`/event/${event.uid}/edit`}><button className="btn btn--block card__btn">Edit</button></Link>
+            <div className="card">
+              <img className="card__image card__image--fence" alt="eventimg" src={event.img}/>
+              <div className="card__content">
+                <div className="card__title">{event.name}</div>
+                <div className="card__title">{event.date}</div>
+                <p className="card__text">{event.description}</p>
+                <h3 className="card__text">{event.address}</h3>
+                {this.props.currentUser.uid
+                ?
+                (
+                  <div>
+                    <button className="btn btn--block card__btn" onClick={this.doAddEvent}>Save This Event</button>
+                  </div>
+                )
+                :
+                (
+                  <div/>
+                )
+                }
+                {event.createdby && this.props.currentUser.uid === event.createdby &&
+
+                  <Link to={`/event/${event.uid}/edit`}><button className="btn btn--block card__btn">Edit</button></Link>
+                }
+              </div>
             </div>
           </div>
-        </div>
       )}
 }
 
