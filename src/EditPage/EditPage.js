@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { doEditEvents, doGetOneEvent } from '../Firebase/Events'
+import { doEditEvents, doGetOneEvent, doDeleteEvent } from '../Firebase/Events'
 
 import { withRouter } from 'react-router-dom'
 
@@ -35,35 +35,37 @@ class EditEvent extends Component {
     }
 
     handleSubmit = (e) => {
-        console.log('click')
         e.preventDefault();
         doEditEvents(this.state.event, this.props.match.params.id)
             .then(snapShot => console.log(snapShot))
             this.props.history.push(`/${this.state.event.category}`)
     }
     
+    handleDelete = (eventId) => {
+        doDeleteEvent(this.props.match.params.id)
+        .then(() => {
+            this.props.history.push(`/${this.state.event.category}`)
+        })
+        // doDeleteEvent(this.props.match.params.id, eventId)
+        // .then(() => {
+        //     this.setState({ })
+        // })
+    }
 
     render() {
         const { name, category, date, description, address, img } = this.state.event
         return(
             <div className="edit-container">
                 <form className="input-flex" onSubmit={this.handleSubmit}>
-                    <h1>Select Category</h1>
-                    <select className="select-menu" name='category' onChange={this.handleInput}>
-                        <option>----</option>
-                        <option>Music</option>
-                        <option>Nature</option>
-                        <option>Exercise</option>
-                        <option>Art</option>
-                    </select>
+                    <h1>Edit Event</h1>
                     <input className="input1" onChange={this.handleInput} type="text" name="name" placeholder="name" defaultValue={name}/>
                     <input className="input2" onChange={this.handleInput} type="text" name="img" placeholder="picture" defaultValue={img}/>
-                    <input className="input3" onChange={this.handleInput} type="text" name="category" placeholder="category" defaultValue={category}/>
                     <input className="input4" onChange={this.handleInput} type="text" name="date" placeholder="date" defaultValue={date}/>
                     <input className="input5" onChange={this.handleInput} type="text" name="description" placeholder="description" defaultValue={description}/>
                     <input className="input6" onChange={this.handleInput} type="text" name="address" placeholder="address" defaultValue={address}/>
                     <button className="edit-btn" type="submit">Submit</button>
                 </form>
+                    <button className="delete-btn"  onClick={(e) => this.handleDelete(e)}>Delete</button>
             </div>
         )
     }

@@ -10,7 +10,7 @@ class NewEvent extends Component {
 
     state = {
         name: "",
-        category: "",
+        category: "Music",
         img: "",
         description: "",
         date: "",
@@ -39,7 +39,6 @@ class NewEvent extends Component {
                 <form className="input-flex" onSubmit={this.handleSubmit}>
                     <h1>Select Category</h1>
                     <select className="select-menu" name='category' onChange={this.handleInput.bind(this)}>
-                        <option>----</option>
                         <option>Music</option>
                         <option>Nature</option>
                         <option>Exercise</option>

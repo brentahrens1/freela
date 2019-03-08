@@ -11,6 +11,7 @@ class Music extends Component {
         doGetMusicEvents().then(events => this.setState({events}))
     }
 
+
     render () {return(
         <div className="music-container">
             <div className="music-banner-flex">
@@ -30,7 +31,7 @@ class Music extends Component {
             <div className="music-flex">
                 {
                     this.state.events.map(e => 
-                        <EventCard event={e}/>
+                        <EventCard event={e} currentUser={this.props.currentUser}/>
                     )
                 }
             </div>

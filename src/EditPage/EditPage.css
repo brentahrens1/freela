@@ -10,6 +10,7 @@
     display: flex; 
     justify-content: center; 
     align-items: center; 
+    flex-direction: column; 
 
 }
 
@@ -67,4 +68,19 @@
     border: 0 solid #71A336; 
     width: 10rem; 
     outline: none; 
+    margin-bottom: 1rem; 
+}
+
+.delete-btn {
+    text-transform: uppercase; 
+    padding: 1rem; 
+    font-family: 'Patua One', cursive;
+    border-radius: 2rem; 
+    font-size: 1rem; 
+    background-color: #BE282F; 
+    border: 0 solid #BE282F; 
+    width: 10rem; 
+    outline: none; 
+    margin-bottom: 1rem; 
+    color: #fff; 
 }

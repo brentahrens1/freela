@@ -37,3 +37,9 @@ export const doGetOneEvent = (id) =>
     eventsRef
         .doc(id)
         .get()
+
+export const doDeleteEvent = (id) => 
+    eventsRef
+        .doc(id)
+        .delete()
+

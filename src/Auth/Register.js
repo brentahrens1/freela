@@ -41,6 +41,7 @@ class Register extends Component {
         return(
             <div className="register-container">
                 <form className="register-flex" onSubmit={this.handleSubmit}>
+                <h1 className="register-header">Register</h1>
                     <input className="input1"
                             type='text' 
                             name='username'
