@@ -12,6 +12,7 @@ class Header extends Component {
                     ?(
                         <nav className="header-navflex">
                             <li className="item1"><Link to="/newevent">Post Event</Link></li>
+                            <Link to={`/profile/${this.props.currentUser.uid}`}><li className="item1">Profile</li></Link>
                             <li className="item2" onClick={() => this.props.doLogOut()}><Link to="/">Log out</Link></li>  
                         </nav>
                     )

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter, Link} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { doGetUserEvents } from '../Firebase/Users'
 import './UserProfile.css'
 
@@ -34,8 +34,7 @@ class UserProfile extends Component {
                             <div className="card__title">{e.date}</div>
                                 <p className="card__text">{e.description}</p>
                                 <h3 className="card__text">{e.address}</h3>
-                                <button className="btn btn--block card__btn" onClick={() => this.doAddEvent()}>Button</button>
-                                <Link to={`/event/${e.uid}/edit`}><button className="btn btn--block card__btn">Edit</button></Link>
+                                <button className="btn btn--block card__btn" onClick={() => this.doAddEvent()}>Remove</button>
                             </div>
                     </div>
                 </div>                       

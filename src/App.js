@@ -73,13 +73,13 @@ class App extends Component {
         />
       <hr/>
         <Switch>
-          <Route exact path="/" component={() => <Home doLogOut={this.doLogOut}/>}/>
+          <Route exact path="/" component={() => <Home currentUser={this.state.currentUser} doLogOut={this.doLogOut}/>}/>
           <Route exact path="/register" component={Register}/>
           <Route exact path="/login" component={() => <Login doSetCurrentUser={this.doSetCurrentUser}/>}/>
           <Route exact path="/music" component={() => <Music currentUser={this.state.currentUser} />}/>
-          <Route exact path="/nature" component={() => <Nature/>}/>
-          <Route exact path="/exercise" component={() => <Exercise/>}/>
-          <Route exact path="/art" component={() => <Art/>}/>
+          <Route exact path="/nature" component={() => <Nature currentUser={this.state.currentUser} />}/>}/>
+          <Route exact path="/exercise" component={() => <Exercise currentUser={this.state.currentUser} />}/>}/>
+          <Route exact path="/art" component={() => <Art currentUser={this.state.currentUser} />}/>}/>
           <Route exact path="/newevent" component={() => <NewEvent/>}/>
           <Route exact path="/event/:id/edit" component={() => <EditEvent/>}/>
           <Route exact path="/profile/:id" component={() => <UserProfile/>}/>
