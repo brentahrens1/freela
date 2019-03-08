@@ -19,7 +19,7 @@ export const doAddEventToUser = (userId, data) =>
         .add(data)
 
 export const doGetUserEvents = (id) =>
-    userRef
+    userRef 
         .doc(id)
         .collection('events')
         .get()

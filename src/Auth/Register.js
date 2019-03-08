@@ -54,7 +54,7 @@ class Register extends Component {
                             placeholder='email'
                             onChange={this.handleChange}
                     />
-                    <input className="input3"
+                    <input className="register-input3"
                             type='password' 
                             name='password'
                             placeholder='password'

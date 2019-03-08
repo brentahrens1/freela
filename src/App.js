@@ -35,10 +35,10 @@ class App extends Component {
          this.setState({
            currentUser: Object.assign(currentUser.data(), {uid: currentUser.id})
           }, ()=>{
-            this.props.history.push("/")
+            // this.props.history.push("/")
           })
        } else {
-         this.props.history.push("/register")
+        //  this.props.history.push("/register")
        }
         })
        
@@ -62,7 +62,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Header/>
+      <Header
+        currentUser={this.state.currentUser}
+        doLogOut={this.doLogOut}
+      />
       <hr/>
         <NavBar
           currentUser={this.state.currentUser}

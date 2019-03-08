@@ -33,7 +33,7 @@ class NewEvent extends Component {
     
 
     render() {
-        const { name, category, date, description, address, img} = this.state
+        const { name, date, description, address, img} = this.state
         return(
             <div className="event-container">
                 <form className="input-flex" onSubmit={this.handleSubmit}>

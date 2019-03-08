@@ -19,7 +19,7 @@ class EventCard extends Component {
               <div className="card__title">{event.date}</div>
               <p className="card__text">{event.description}</p>
               <h3 className="card__text">{event.address}</h3>
-              <button className="btn btn--block card__btn" onClick={() => this.doAddEvent()}>Button</button>
+              <button className="btn btn--block card__btn" onClick={() => this.doAddEvent()}>Save This Event</button>
               <Link to={`/event/${event.uid}/edit`}><button className="btn btn--block card__btn">Edit</button></Link>
             </div>
           </div>

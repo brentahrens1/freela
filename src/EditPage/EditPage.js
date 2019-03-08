@@ -53,7 +53,7 @@ class EditEvent extends Component {
     }
 
     render() {
-        const { name, category, date, description, address, img } = this.state.event
+        const { name, date, description, address, img } = this.state.event
         return(
             <div className="edit-container">
                 <form className="input-flex" onSubmit={this.handleSubmit}>
