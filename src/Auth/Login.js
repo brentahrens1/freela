@@ -46,7 +46,7 @@ class Login extends Component {
                         placeholder="email"
                         onChange={this.handleChange}
                     />
-                    <input  className="input2"
+                    <input  className="login-input2"
                         type="password"
                         name="password"
                         placeholder="password"

@@ -10,7 +10,7 @@ class NewEvent extends Component {
 
     state = {
         name: "",
-        category: "",
+        category: "Music",
         img: "",
         description: "",
         date: "",
@@ -28,12 +28,12 @@ class NewEvent extends Component {
         e.preventDefault();
         doCreateEvent(this.state)
             .then(snapShot => console.log(snapShot))
-            this.props.history.push("/")
+            this.props.history.push(`/${this.state.category}`)
     }
     
 
     render() {
-        const { name, category, date, description, address, img} = this.state
+        const { name, date, description, address, img} = this.state
         return(
             <div className="event-container">
                 <form className="input-flex" onSubmit={this.handleSubmit}>
@@ -46,8 +46,6 @@ class NewEvent extends Component {
                     </select>
                     <input className="input1" onChange={this.handleInput.bind(this)} type="text" name="name" placeholder="name" value={name}/>
                     <input className="input2" onChange={this.handleInput.bind(this)} type="text" name="img" placeholder="picture" value={img}/>
-                    <input className="input3" onChange={this.handleInput.bind(this)} type="text" name="category" placeholder="category" value={category}/>
-                    {/* <input className="input3" onChange={this.handleInput.bind(this)} type="text" name="category" placeholder="category" value={category}/> */}
                     <input className="input4" onChange={this.handleInput.bind(this)} type="text" name="date" placeholder="date" value={date}/>
                     <input className="input5" onChange={this.handleInput.bind(this)} type="text" name="description" placeholder="description" value={description}/>
                     <input className="input6" onChange={this.handleInput.bind(this)} type="text" name="address" placeholder="address" value={address}/>

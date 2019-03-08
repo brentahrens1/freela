@@ -1,64 +1,30 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './EventCard.css'
-import MaterialIcon, {colorPalette} from 'material-icons-react';
+import { Link } from 'react-router-dom'
+import { doAddEventToUser } from '../Firebase/Users'
 
 
-const EventCard = (props) => {
-    console.log(props.event)
-    return(
-<div class="container">
-  <div class="cellphone-container">    
-      <div class="movie">       
-        {/* <div class="menu"><i class="material-icons"></i></div> */}
-        <img  class="movie-img" src={props.event.img} alt="card"></img>
-        <div class="text-movie-cont">
-          <div class="mr-grid">
-            <div class="col1">
-              <h1 className="event-name">{props.event.name}</h1>
-              <ul class="movie-gen">
-                <li>Hip-Hop /</li>
-                <li>10PM  /</li>
-                <li>LIVE</li>
-              </ul>
+class EventCard extends Component {
+    doAddEvent = () =>
+      doAddEventToUser(this.props.currentUser.uid, {eventId: this.props.event.uid, name: this.props.event.name, img: this.props.event.img, address: this.props.event.address , description: this.props.event.description})
+
+    render () {
+      const { event } = this.props
+        return(
+          <div className="cards__item">
+          <div className="card">
+            <img className="card__image card__image--fence" alt="eventimg" src={event.img}/>
+            <div className="card__content">
+              <div className="card__title">{event.name}</div>
+              <div className="card__title">{event.date}</div>
+              <p className="card__text">{event.description}</p>
+              <h3 className="card__text">{event.address}</h3>
+              <button className="btn btn--block card__btn" onClick={() => this.doAddEvent()}>Save This Event</button>
+              <Link to={`/event/${event.uid}/edit`}><button className="btn btn--block card__btn">Edit</button></Link>
             </div>
-          </div>
-          <div class="mr-grid summary-row">
-            <div class="col2">
-              <h5>Details</h5>
-            </div>
-            <div class="col2">
-               {/* <ul class="movie-likes">
-                <li><i class="material-icons">&#xE813;</i>124</li>
-                <li><i class="material-icons">&#xE813;</i>3</li>
-              </ul> */}
-            </div>
-          </div>
-          <div class="mr-grid">
-            <div class="col1">
-              <p class="movie-description">{props.event.description}</p>
-            </div>
-          </div>
-          <div class="mr-grid actors-row">
-            <div class="col1">
-              <p class="movie-actors">{props.event.address}</p>
-            </div>
-          </div>
-          <div class="mr-grid action-row">
-            <div class="col2"><div class="watch-btn"><h3>Save the date</h3></div>
-            </div>
-            {/* <div class="col6 action-btn"><i class="material-icons">&#xE161;</i>
-            </div>
-            <div class="col6 action-btn"><i class="material-icons">&#xE866;</i>
-            </div>
-            <div class="col6 action-btn"><i class="material-icons">&#xE80D;</i>
-            </div> */}
           </div>
         </div>
-      </div>
-  </div>
-</div>
-
-    )
+      )}
 }
 
 export default EventCard

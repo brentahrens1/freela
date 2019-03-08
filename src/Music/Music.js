@@ -8,9 +8,9 @@ class Music extends Component {
         events: []
     }
     componentDidMount() {
-        doGetMusicEvents()
-            .then(snapShot => this.setState({events: snapShot.docs.map(d => d.data())}))
+        doGetMusicEvents().then(events => this.setState({events}))
     }
+
 
     render () {return(
         <div className="music-container">
@@ -31,7 +31,7 @@ class Music extends Component {
             <div className="music-flex">
                 {
                     this.state.events.map(e => 
-                        <EventCard event={e}/>
+                        <EventCard event={e} currentUser={this.props.currentUser}/>
                     )
                 }
             </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, withRouter} from 'react-router-dom'
 import { auth } from './Firebase/Firebase';
 import { doGetUser } from './Firebase/Users';
 
@@ -16,6 +16,8 @@ import Nature from './Nature/Nature'
 import Exercise from './Exercise/Exercise'
 import Art from './Art/Art'
 import NewEvent from './NewEvent/NewEvent'
+import EditEvent from './EditPage/EditPage'
+import UserProfile from './UserProfile/UserProfile'
 
 class App extends Component {
 
@@ -28,7 +30,18 @@ class App extends Component {
     .onAuthStateChanged(authUser =>
       authUser &&
       doGetUser(authUser.uid)
-      .then(currentUser => this.setState({currentUser: currentUser.data()}))
+      .then(currentUser => {
+       if (currentUser) {
+         this.setState({
+           currentUser: Object.assign(currentUser.data(), {uid: currentUser.id})
+          }, ()=>{
+            // this.props.history.push("/")
+          })
+       } else {
+        //  this.props.history.push("/register")
+       }
+        })
+       
       )
   }
 
@@ -39,10 +52,20 @@ class App extends Component {
       
     })
   }
+
+  doSetCurrentUser = (user)=>{
+    this.setState({
+      currentUser: user
+    })
+  }
+
   render() {
     return (
       <div className="App">
-      <Header/>
+      <Header
+        currentUser={this.state.currentUser}
+        doLogOut={this.doLogOut}
+      />
       <hr/>
         <NavBar
           currentUser={this.state.currentUser}
@@ -50,18 +73,20 @@ class App extends Component {
         />
       <hr/>
         <Switch>
-          <Route exact path="/" component={() => <Home doLogOut={this.doLogOut}/>}/>
+          <Route exact path="/" component={() => <Home currentUser={this.state.currentUser} doLogOut={this.doLogOut}/>}/>
           <Route exact path="/register" component={Register}/>
-          <Route exact path="/login" component={() => <Login doSetCurrentUser={(user) => this.setState({currentUser: user})}/>}/>
-          <Route exact path="/music" component={() => <Music/>}/>
-          <Route exact path="/nature" component={() => <Nature/>}/>
-          <Route exact path="/exercise" component={() => <Exercise/>}/>
-          <Route exact path="/art" component={() => <Art/>}/>
+          <Route exact path="/login" component={() => <Login doSetCurrentUser={this.doSetCurrentUser}/>}/>
+          <Route exact path="/music" component={() => <Music currentUser={this.state.currentUser} />}/>
+          <Route exact path="/nature" component={() => <Nature currentUser={this.state.currentUser} />}/>}/>
+          <Route exact path="/exercise" component={() => <Exercise currentUser={this.state.currentUser} />}/>}/>
+          <Route exact path="/art" component={() => <Art currentUser={this.state.currentUser} />}/>}/>
           <Route exact path="/newevent" component={() => <NewEvent/>}/>
+          <Route exact path="/event/:id/edit" component={() => <EditEvent/>}/>
+          <Route exact path="/profile/:id" component={() => <UserProfile/>}/>
         </Switch>
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

@@ -12,3 +12,14 @@ export const doGetUser = (id) =>
         .doc(id)
         .get()
 
+export const doAddEventToUser = (userId, data) => 
+    userRef
+        .doc(userId)
+        .collection('events')
+        .add(data)
+
+export const doGetUserEvents = (id) =>
+    userRef 
+        .doc(id)
+        .collection('events')
+        .get()

@@ -17,7 +17,7 @@ class Art extends Component {
             <div className="art-banner-flex">
                 <img className="art-image" src="https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1485273307/lacma-urban-lights-LAART0117.jpg?itok=NsdoUAmw" alt="art"/>
                 <div className="desc-flex">
-                    <h1 className="art-header">art</h1>
+                    <h1 className="art-header">Art</h1>
                     <p className="desc-art">No matter your genre preference, LA's got an active music scene for your taste -- and probably 
                         has a totally free ongoing night that'll please you, aurally. Here are LA's best free ongoing 
                         music nights,  we'd love to hear anything else we missed in the comments -- Please feel free to register 
@@ -31,7 +31,7 @@ class Art extends Component {
             <div className="art-flex">
                 {
                     this.state.events.map(e => 
-                        <EventCard event={e}/>
+                        <EventCard event={e} currentUser={this.props.currentUser}/>
                     )
                 }
             </div>

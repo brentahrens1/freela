@@ -36,3 +36,11 @@
     width: 10rem; 
     outline: none; 
 }
+
+.register-header {
+    font-family: 'Patua One', cursive;
+}
+
+.register-input3 {
+    margin-bottom: 2rem; 
+}
