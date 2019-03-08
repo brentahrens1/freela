@@ -10,12 +10,11 @@ class EventCard extends Component {
     user:{}
   }
     doAddEvent = () =>{
-    console.log(this.props)
       doAddEventToUser(this.props.currentUser.uid, {eventId: this.props.event.uid, name: this.props.event.name, img: this.props.event.img, address: this.props.event.address , description: this.props.event.description})
     }
 
     componentDidMount(){
-      console.log(this.props)
+
       doGetUser(this.props.event.createdby).then(snapShot =>{
         this.setState({
           user: snapShot.data()
@@ -25,7 +24,7 @@ class EventCard extends Component {
 
     render () {
       const { event } = this.props
-      console.log(this.props)
+
         return(
           <div className="cards__item">
             <div className="card">
