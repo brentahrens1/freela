@@ -9,7 +9,7 @@ class Exercise extends Component {
     }
     componentDidMount() {
         doGetExerciseEvents()
-            .then(snapShot => this.setState({events: snapShot.docs.map(d => d.data())}))
+            .then(events => this.setState({events}))
     }
 
     render () {return(
@@ -31,7 +31,7 @@ class Exercise extends Component {
             <div className="exercise-flex">
                 {
                     this.state.events.map(e => 
-                        <EventCard event={e}/>
+                        <EventCard event={e} currentUser={this.props.currentUser}/>
                     )
                 }
             </div>

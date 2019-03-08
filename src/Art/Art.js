@@ -9,7 +9,7 @@ class Art extends Component {
     }
     componentDidMount() {
         doGetArtEvents()
-            .then(snapShot => this.setState({events: snapShot.docs.map(d => d.data())}))
+        .then(events => this.setState({events}))
     }
 
     render () {return(

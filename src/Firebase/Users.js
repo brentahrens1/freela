@@ -23,3 +23,11 @@ export const doGetUserEvents = (id) =>
         .doc(id)
         .collection('events')
         .get()
+        .then(snapShot => snapShot.docs.map(d => Object.assign(d.data(), {uid: d.id})))
+
+export const doDeleteEvent = (userId, id) => 
+    userRef
+    .doc(userId)
+    .collection('events')
+    .doc(id)
+    .delete()

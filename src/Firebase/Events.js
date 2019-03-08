@@ -16,16 +16,19 @@ export const doGetNatureEvents = () =>
     eventsRef
         .where('category', '==', 'Nature')
         .get()
+        .then(snapShot => snapShot.docs.map(d => Object.assign(d.data(), {uid: d.id})))
 
 export const doGetExerciseEvents = () =>
     eventsRef
         .where('category', '==', 'Exercise')
         .get()
+        .then(snapShot => snapShot.docs.map(d => Object.assign(d.data(), {uid: d.id})))
 
 export const doGetArtEvents = () =>
     eventsRef
         .where('category', '==', 'Art')
         .get()
+        .then(snapShot => snapShot.docs.map(d => Object.assign(d.data(), {uid: d.id})))
 
 export const doEditEvents = (data, id) =>
     eventsRef

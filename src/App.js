@@ -82,7 +82,7 @@ class App extends Component {
           <Route exact path="/art" component={() => <Art currentUser={this.state.currentUser} />}/>}/>
           <Route exact path="/newevent" component={() => <NewEvent/>}/>
           <Route exact path="/event/:id/edit" component={() => <EditEvent/>}/>
-          <Route exact path="/profile/:id" component={() => <UserProfile/>}/>
+          <Route exact path="/profile/:id" component={() => <UserProfile currentUser={this.state.currentUser}/>}/>
         </Switch>
       </div>
     );
