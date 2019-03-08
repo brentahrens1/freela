@@ -27,7 +27,12 @@ export const doGetUserEvents = (id) =>
 
 export const doDeleteEvent = (userId, id) => 
     userRef
-    .doc(userId)
-    .collection('events')
-    .doc(id)
-    .delete()
+        .doc(userId)
+        .collection('events')
+        .doc(id)
+        .delete()
+
+export const doUpdateUserInfo = (id, data) =>
+    userRef
+        .doc(id)
+        .update(data)
