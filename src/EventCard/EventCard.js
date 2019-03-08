@@ -1,17 +1,31 @@
 import React, { Component } from 'react'
 import './EventCard.css'
 import { Link } from 'react-router-dom'
-import { doAddEventToUser } from '../Firebase/Users'
+import { doAddEventToUser, doGetUser } from '../Firebase/Users'
 
 
 class EventCard extends Component {
+
+  state={
+    user:{}
+  }
     doAddEvent = () =>{
     console.log(this.props)
       doAddEventToUser(this.props.currentUser.uid, {eventId: this.props.event.uid, name: this.props.event.name, img: this.props.event.img, address: this.props.event.address , description: this.props.event.description})
     }
 
+    componentDidMount(){
+      console.log(this.props)
+      doGetUser(this.props.event.createdby).then(snapShot =>{
+        this.setState({
+          user: snapShot.data()
+        })
+      })
+    }
+
     render () {
       const { event } = this.props
+      console.log(this.props)
         return(
           <div className="cards__item">
             <div className="card">
@@ -21,6 +35,7 @@ class EventCard extends Component {
                 <div className="card__title">{event.date}</div>
                 <p className="card__text">{event.description}</p>
                 <h3 className="card__text">{event.address}</h3>
+                <p className="card__text">Posted by: {this.state.user.username}</p>
                 {this.props.currentUser.uid
                 ?
                 (
