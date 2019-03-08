@@ -5,8 +5,10 @@ import { doAddEventToUser } from '../Firebase/Users'
 
 
 class EventCard extends Component {
-    doAddEvent = () =>
+    doAddEvent = () =>{
+    console.log(this.props)
       doAddEventToUser(this.props.currentUser.uid, {eventId: this.props.event.uid, name: this.props.event.name, img: this.props.event.img, address: this.props.event.address , description: this.props.event.description})
+    }
 
     render () {
       const { event } = this.props
@@ -19,7 +21,7 @@ class EventCard extends Component {
               <div className="card__title">{event.date}</div>
               <p className="card__text">{event.description}</p>
               <h3 className="card__text">{event.address}</h3>
-              <button className="btn btn--block card__btn" onClick={() => this.doAddEvent()}>Save This Event</button>
+              <button className="btn btn--block card__btn" onClick={this.doAddEvent}>Save This Event</button>
               <Link to={`/event/${event.uid}/edit`}><button className="btn btn--block card__btn">Edit</button></Link>
             </div>
           </div>

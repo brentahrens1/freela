@@ -9,7 +9,7 @@ class Nature extends Component {
     }
     componentDidMount() {
         doGetNatureEvents()
-            .then(snapShot => this.setState({events: snapShot.docs.map(d => d.data())}))
+            .then(events => this.setState({events}))
     }
 
     render () {return(
@@ -31,7 +31,7 @@ class Nature extends Component {
             <div className="nature-flex">
                 {
                     this.state.events.map(e => 
-                        <EventCard event={e}/>
+                        <EventCard event={e} currentUser={this.props.currentUser}/>
                     )
                 }
             </div>
