@@ -31,7 +31,7 @@ class Music extends Component {
             <div className="music-flex">
                 {
                     this.state.events.map(e => 
-                        <EventCard event={e} currentUser={this.props.currentUser}/>
+                        <EventCard event={e} currentUser={this.props.currentUser} />
                     )
                 }
             </div>
