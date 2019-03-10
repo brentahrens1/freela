@@ -4,6 +4,7 @@ import { doEditEvents, doGetOneEvent, doDeleteEvent } from '../Firebase/Events'
 import { withRouter } from 'react-router-dom'
 
 import './EditPage.css'
+import ModalBasic from '../Modal/Modal'
 
 
 class EditEvent extends Component {
@@ -21,8 +22,6 @@ class EditEvent extends Component {
                 })
             }) 
     }
-
-
 
     handleInput=(e) =>{
         
@@ -54,6 +53,7 @@ class EditEvent extends Component {
 
     render() {
         const { name, date, description, address, img } = this.state.event
+        console.log(this.props)
         return(
             <div className="edit-container">
                 <form className="input-flex" onSubmit={this.handleSubmit}>
@@ -65,8 +65,10 @@ class EditEvent extends Component {
                     <input className="input6" onChange={this.handleInput} type="text" name="address" placeholder="address" defaultValue={address}/>
                     <button className="edit-btn" type="submit">Submit</button>
                 </form>
-                    <button className="delete-btn"  onClick={(e) => this.handleDelete(e)}>Delete</button>
+                    {/* <button className="delete-btn"  onClick={(e) => this.handleDelete(e)}>Delete</button> */}
+                    <ModalBasic handleDelete={this.handleDelete} />
             </div>
+
         )
     }
 }

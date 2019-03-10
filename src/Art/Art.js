@@ -15,7 +15,7 @@ class Art extends Component {
     render () {return(
         <div className="art-container">
             <div className="art-banner-flex">
-                <img className="art-image" src="https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1485273307/lacma-urban-lights-LAART0117.jpg?itok=NsdoUAmw" alt="art"/>
+                <img className="art-image" src="https://images.unsplash.com/photo-1447758902204-48010b87c24d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="art"/>
                 <div className="desc-flex">
                     <h1 className="art-header">Art</h1>
                     <p className="desc-art">No matter your genre preference, LA's got an active music scene for your taste -- and probably 

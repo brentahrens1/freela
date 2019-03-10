@@ -18,7 +18,6 @@ import Art from './Art/Art'
 import NewEvent from './NewEvent/NewEvent'
 import EditEvent from './EditPage/EditPage'
 import UserProfile from './UserProfile/UserProfile'
-import EditUserProfile from './EditUserProfile/EditUserProfile'
 
 class App extends Component {
 
@@ -83,8 +82,7 @@ class App extends Component {
           <Route exact path="/art" component={() => <Art currentUser={this.state.currentUser} />}/>}/>
           <Route exact path="/newevent" component={() => <NewEvent currentUser={this.state.currentUser}/>}/>
           <Route exact path="/event/:id/edit" component={() => <EditEvent/>}/>
-          <Route exact path="/profile/:id" component={() => <UserProfile currentUser={this.state.currentUser}/>}/>
-          <Route exact path="/editprofile/:id" component={() => <EditUserProfile currentUser={this.state.currentUser} />}/>
+          <Route exact path="/profile/:id" component={() => <UserProfile doSetCurrrentUser={this.doSetCurrentUser} currentUser={this.state.currentUser}/>}/>
         </Switch>
       </div>
     );

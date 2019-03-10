@@ -15,13 +15,14 @@ class Music extends Component {
     render () {return(
         <div className="music-container">
             <div className="music-banner-flex">
-                <img className="music-image" src="https://cdn2.lamag.com/wp-content/uploads/sites/6/2018/01/Copy-of-LaurenRuthWard_TheEcho_010818-2.jpg" alt="music"/>
+                <img className="music-image" src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="music"/>
                 <div className="desc-flex">
                     <h1 className="music-header">Live Music</h1>
                     <p className="desc-music">No matter your genre preference, LA's got an active music scene for your taste -- and probably 
                         has a totally free ongoing night that'll please you, aurally. Here are LA's best free ongoing 
                         music nights,  we'd love to hear anything else we missed in the comments -- Please feel free to register 
-                        and post any upcoming live shows coming up.</p>
+                        and post any upcoming live shows coming up.
+                    </p>
                     <h1 className="music-header">Live Feed</h1>
                 </div>
             </div>

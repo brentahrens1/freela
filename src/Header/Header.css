@@ -1,17 +1,18 @@
 .top-header {
     font-size: 4rem; 
-    font-family: 'Chewy', cursive;
+    font-family: 'Patua One', cursive;
     margin-top: 0; 
     margin-bottom: 0; 
     color: #000; 
 }
 
 .header-container a {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .header-img {
     height: 5rem; 
+    width: 3rem
 }
 
 .header-flex {

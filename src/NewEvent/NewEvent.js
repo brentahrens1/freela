@@ -35,7 +35,7 @@ class NewEvent extends Component {
     
 
     render() {
-        const { name, date, description, address, img, createdby} = this.state
+        const { name, date, description, address, img} = this.state
         return(
             <div className="event-container">
                 <form className="input-flex" onSubmit={this.handleSubmit}>
@@ -51,7 +51,6 @@ class NewEvent extends Component {
                     <input className="input4" onChange={this.handleInput.bind(this)} type="text" name="date" placeholder="date" value={date}/>
                     <input className="input5" onChange={this.handleInput.bind(this)} type="text" name="description" placeholder="description" value={description}/>
                     <input className="input6" onChange={this.handleInput.bind(this)} type="text" name="address" placeholder="address" value={address}/>
-                    <input className="input6" onChange={this.handleInput.bind(this)} type="text" name="createdby" placeholder="address" value={createdby}/>
                     <button className="newevent-btn" type="submit">Create Event</button>
                 </form>
             </div>
