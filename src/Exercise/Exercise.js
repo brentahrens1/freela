@@ -15,7 +15,7 @@ class Exercise extends Component {
     render () {return(
         <div className="exercise-container">
             <div className="exercise-banner-flex">
-                <img className="exercise-image" src="https://fitt.co/los-angeles/wp-content/uploads/sites/33/2018/01/AthletaLA-e1514946771781.jpg" alt="exercise"/>
+                <img className="exercise-image" src="https://images.unsplash.com/photo-1544216717-3bbf52512659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="exercise"/>
                 <div className="desc-flex">
                     <h1 className="exercise-header">Exercise</h1>
                     <p className="desc-exercise">No matter your genre preference, LA's got an active music scene for your taste -- and probably 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { doGetUserEvents, doDeleteEvent, doUpdateUserInfo } from '../Firebase/Users'
 import './UserProfile.css'
 
@@ -118,25 +118,25 @@ class UserProfile extends Component {
 
 const EditProfileForm = ({showProfile, handleInput, addBio, currentUser}) =>
     <div>
-        <form onSubmit={e => addBio(e)}>
+        <form className="edit-user-container" onSubmit={e => addBio(e)}>
             <h1 className="edituser-header">User Profile</h1>
-            <input className="input1"
+            <input className="edit-user-input1"
                 type="text"
                 name="userImg"
                 placeholder="profile pic"
                 defaultValue={currentUser.userImg}
                 onChange={e => handleInput(e)}
             />
-            <input className="input1"
+            <input className="edit-user-input1"
                 type="text"
                 name="userBio"
                 placeholder="Bio"
                 defaultValue={currentUser.userBio}
                 onChange={e => handleInput(e)}
             />
-            <button type="submit">Submit</button>
+            <button className="profileedit-btn" type="submit">Submit</button>
         </form>
-        <button onClick={showProfile}>show profile</button>
+        {/* <button onClick={showProfile}>show profile</button> */}
     </div>
 
 export default withRouter(UserProfile)
