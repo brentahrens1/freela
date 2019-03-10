@@ -10,6 +10,7 @@ class Home extends Component {
       <img className="splash-header2" src="https://images.unsplash.com/photo-1540230110864-02a79646ae6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
       <img className="splash-header2" src="https://images.unsplash.com/photo-1524549028671-c64980386279?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
       <img className="splash-header2" src="https://images.unsplash.com/photo-1538647021323-abb94a853862?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
+      <h1 className="home-header">Featured Events</h1>  
         <div className="container">
           <div className="all">
             <div className="front"><img src="https://www.discoverlosangeles.com/sites/default/files/styles/hero/public/images/2019-01/bronson-batmancave-hollywood-sign-hiking.jpg?auto=compress&cs=tinysrgb&h=650&w=900" alt="home"/></div>
@@ -19,9 +20,7 @@ class Home extends Component {
             <div className="top"></div>
             <div className="bottom"></div>
           </div>
-        </div>  
-        <h1 className="home-header">Featured Events</h1>   
-           
+        </div>   
       </div>      
     )
   }

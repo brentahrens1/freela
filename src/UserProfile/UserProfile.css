@@ -1,6 +1,6 @@
 .profile-header {
     font-family: 'Patua One', cursive;
-    text-align: center; 
+    text-align: center;
 }
 
 .profile-flex {
@@ -41,6 +41,7 @@
     width: 20rem; 
     text-align: center; 
     margin-bottom: 3rem; 
+    text-align: center; 
 }
 
 .edit-user-container {
@@ -69,4 +70,5 @@
 
 .edituser-header {
     font-family: 'Patua One', cursive;
+    text-align: center; 
 }
