@@ -22,13 +22,9 @@ class Header extends Component {
                             <li className="item1"><Link to='/login'>Log in</Link></li>
                             <li className="item2"><Link to='/register'>Register</Link></li>
                         </nav>
-
                     )
                 } 
             </ul>
-            <div className="header-flex">          
-                <Link to="/"><h1 className="top-header">FREE LA</h1></Link>
-            </div>
         </div>
         )
     }

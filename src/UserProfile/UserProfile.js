@@ -80,7 +80,6 @@ class UserProfile extends Component {
                                 <p className="profile-description">{this.props.currentUser.userBio}</p>
                                 <button className="profileedit-btn" onClick={() => this.setState({showEditForm: !this.state.showEditForm})}>Edit Profile</button>
                             </div>
-                            <hr/>
                             <h1 className="profile-header">Your upcoming events</h1>
                             <div className="profile-flex">
                             {

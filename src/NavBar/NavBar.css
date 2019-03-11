@@ -6,15 +6,26 @@
     display: flex; 
     justify-content: space-around; 
     font-family: 'Patua One', cursive;
+    padding: 1rem; 
 }
 
 .list-item a{
     text-decoration: none; 
     font-family: 'Patua One', cursive;
-    color: #000; 
+    color: #fff; 
 }
 
 .list-item a:visited {
-    color: #000; 
+    color: #fff; 
 }
 
+.navbar-container {
+    background-color: #4B4748; 
+}
+
+.navbar-logo {
+    width: 2.7rem; 
+    height: 2.5rem; 
+    margin-top: -.5rem; 
+    margin-left: -10rem; 
+}

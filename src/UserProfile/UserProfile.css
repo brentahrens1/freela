@@ -10,7 +10,8 @@
 }
 
 .profile-img {
-    border-radius: 100%;
+    border-radius: 2rem;
+    border: 1px solid #000; 
     width: 200px; 
     height: 200px; 
 }
@@ -20,13 +21,15 @@
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
+    background-size: cover; 
+    margin-top: -1rem; 
 }
 
 .profileedit-btn {
     text-transform: uppercase; 
     padding: 1rem; 
     font-family: 'Patua One', cursive;
-    border-radius: 2rem; 
+    border-radius: .5rem; 
     font-size: 1rem; 
     background-color: #71A336; 
     color: #fff; 

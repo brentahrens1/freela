@@ -66,12 +66,10 @@ class App extends Component {
         currentUser={this.state.currentUser}
         doLogOut={this.doLogOut}
       />
-      <hr/>
         <NavBar
           currentUser={this.state.currentUser}
           doLogOut={this.doLogOut}
         />
-      <hr/>
         <Switch>
           <Route exact path="/" component={() => <Home currentUser={this.state.currentUser} doLogOut={this.doLogOut}/>}/>
           <Route exact path="/register" component={Register}/>

@@ -8,6 +8,7 @@ class NavBar extends Component{
         <div className="navbar-container">
             <ul className="nav-list">
                 <nav className="list-item">
+                    <img className="navbar-logo" src="https://i.imgur.com/9O8Eq4X.png" alt="nav"/>
                     <li><Link to="/music">Music</Link></li>
                     <li><Link to="/nature">Nature</Link></li>
                     <li><Link to="/exercise">Exercise</Link></li>
@@ -15,6 +16,8 @@ class NavBar extends Component{
                 </nav>                             
             </ul>
         </div>
+
+        
         )
     }
 }
