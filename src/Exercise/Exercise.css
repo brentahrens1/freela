@@ -24,6 +24,7 @@
 .exercise-banner-flex {
     display: flex; 
     flex-wrap: wrap; 
+    justify-content: space-evenly; 
 }
 
 .desc-flex {
@@ -38,7 +39,7 @@
 
 .desc-exercise {
     color: #000; 
-    width: 30rem; 
+    width: 40rem; 
     margin-left: 1rem; 
 }
 

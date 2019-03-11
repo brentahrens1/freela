@@ -1,18 +1,22 @@
 import React, { Component } from "react"
 import { withRouter } from 'react-router-dom'
 import './Home.css'
+import TwitterFeedHome from '../TwitterFeedHome/TwitterFeedHome'
 
 
 class Home extends Component {
+
   render() {
     console.log(this.props)
     return (
       <div className="home-container">
           <img className="main-splash-img" src="https://i.imgur.com/8FCbeHo.jpg" alt="home"/>
+        <div className="mid-image-flex">
           <img className="splash-header2" src="https://images.unsplash.com/photo-1542622713-52cecfdf7f92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="home"/>
           <img className="splash-header2" src="https://images.unsplash.com/photo-1540230110864-02a79646ae6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="home"/>
           <img className="splash-header2" src="https://images.unsplash.com/photo-1524549028671-c64980386279?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="home"/>
           <img className="splash-header2" src="https://images.unsplash.com/photo-1538647021323-abb94a853862?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="home"/>
+        </div>
         <div className="featured-container">
           <h1 className="home-header">Featured Events</h1> 
           <div className="featured-flex">
@@ -25,18 +29,6 @@ class Home extends Component {
               gallery in LA through March 11th, taking over the former Taschen Gallery space on Beverly, where they are 
               showing British artist Philip Colbert’s Hunt Paintings, presented by Unit London.</p>
               <h3 className="card__text">TUE MAR 5 11:00AM - MON MAR 11 6:00PM</h3>
-              {this.props.currentUser.uid
-              ?
-              (
-                <div>
-                  <button className="btn btn--block card__btn">Save This Event</button>
-                </div>
-              )
-              :
-              (
-                <div/>
-              )
-              }
               </div>
             </div>
             </div>
@@ -49,18 +41,6 @@ class Home extends Component {
               <p className="card__text">Grand Park's popular yoga sessions return, giving participants the opportunity to relax, 
               rejuvenate and re-energize.</p>
               <h3 className="card__text">Grand Park</h3>
-              {this.props.currentUser.uid
-              ?
-              (
-                <div>
-                  <button className="btn btn--block card__btn">Save This Event</button>
-                </div>
-              )
-              :
-              (
-                <div/>
-              )
-              }
               </div>
             </div>
             </div>
@@ -74,22 +54,14 @@ class Home extends Component {
               symphony of insatiable rhythms and get to know you better dance music by old school legends Aaliyah, Bobby Brown, Boyz II Men,
               D'angelo, En Vogue and just about everything 90's, HipHop, and R&B" DTLA WEEKLY</p>
               <h3 className="card__text">1455 W Sunset BLVD Echo Park</h3>
-              {this.props.currentUser.uid
-              ?
-              (
-                <div>
-                  <button className="btn btn--block card__btn">Save This Event</button>
-                </div>
-              )
-              :
-              (
-                <div/>
-              )
-              }
               </div>
             </div>
             </div>
             </div> 
+            <h1 className="home-header">Discover LA</h1>
+            <div className="home-twitter-align">
+              <TwitterFeedHome/>
+            </div>
         </div>
       </div>      
     )

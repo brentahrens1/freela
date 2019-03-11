@@ -12,13 +12,19 @@ perspective:1000px;
     font-size: 2rem;
 }
 
+.mid-image-flex {
+    display: flex; 
+    justify-content: space-evenly; 
+    flex-wrap: wrap; 
+    margin-bottom: 5rem; 
+}
+
 .home-container {
     margin-top: 2rem;
 }
 
 .splash-header2 {
     height: 32rem; 
-    margin-left: .8rem; 
     border-radius: .2rem; 
 }
 
@@ -26,6 +32,11 @@ perspective:1000px;
     width: 100%;  
     margin-top: -2rem; 
     margin-bottom: 2rem; 
+}
+
+.home-twitter-align {
+    display: flex; 
+    justify-content: center; 
 }
 
 .featured-flex {

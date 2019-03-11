@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './Music.css'
 import EventCard from '../EventCard/EventCard'
 import { doGetMusicEvents } from '../Firebase/Events'
+import TwitterFeedMusic from '../TwitterFeed/TwitterFeed'
 
 class Music extends Component {
     state = {
@@ -17,13 +18,7 @@ class Music extends Component {
             <div className="music-banner-flex">
                 <img className="music-image" src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="music"/>
                 <div className="desc-flex">
-                    <h1 className="music-header">Live Music</h1>
-                    <p className="desc-music">No matter your genre preference, LA's got an active music scene for your taste -- and probably 
-                        has a totally free ongoing night that'll please you, aurally. Here are LA's best free ongoing 
-                        music nights,  we'd love to hear anything else we missed in the comments -- Please feel free to register 
-                        and post any upcoming live shows coming up.
-                    </p>
-                    <h1 className="music-header">Live Feed</h1>
+                        <TwitterFeedMusic/>
                 </div>
             </div>
             <hr/>
