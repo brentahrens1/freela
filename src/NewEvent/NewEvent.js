@@ -48,9 +48,9 @@ class NewEvent extends Component {
                     </select>
                     <input className="input1" onChange={this.handleInput.bind(this)} type="text" name="name" placeholder="name" value={name}/>
                     <input className="input2" onChange={this.handleInput.bind(this)} type="text" name="img" placeholder="picture" value={img}/>
-                    <input className="input4" onChange={this.handleInput.bind(this)} type="text" name="date" placeholder="date" value={date}/>
-                    <input className="input5" onChange={this.handleInput.bind(this)} type="text" name="description" placeholder="description" value={description}/>
-                    <input className="input6" onChange={this.handleInput.bind(this)} type="text" name="address" placeholder="address" value={address}/>
+                    <input className="input3" onChange={this.handleInput.bind(this)} type="text" name="date" placeholder="date" value={date}/>
+                    <input className="input4" onChange={this.handleInput.bind(this)} type="text" name="description" placeholder="description" value={description}/>
+                    <input className="input5" onChange={this.handleInput.bind(this)} type="text" name="address" placeholder="address" value={address}/>
                     <button className="newevent-btn" type="submit">Create Event</button>
                 </form>
             </div>

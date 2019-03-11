@@ -12,61 +12,36 @@ perspective:1000px;
     font-size: 2rem;
 }
 
+.mid-image-flex {
+    display: flex; 
+    justify-content: space-evenly; 
+    flex-wrap: wrap; 
+    margin-bottom: 5rem; 
+}
+
 .home-container {
     margin-top: 2rem;
 }
 
 .splash-header2 {
     height: 32rem; 
-    margin-left: .8rem; 
     border-radius: .2rem; 
 }
 
-.all{
-width:inherit;
-height:inherit;
-animation:cube 10s linear infinite;
-transform-style:preserve-3d;
+.main-splash-img{
+    width: 100%;  
+    margin-top: -2rem; 
+    margin-bottom: 2rem; 
 }
-.all div{
-position:absolute;
-width:inherit;
-height:inherit;
-opacity:.8;
-background-color:black;
-height: 14rem; 
+
+.home-twitter-align {
+    display: flex; 
+    justify-content: center; 
 }
-.front{
-transform:translateZ(150px);
-}
-.back{
-transform:rotateY(180deg)
-translateZ(150px);
-}
-.left{
-transform:rotateY(-90deg)
-translateX(-150px);
-transform-origin:left;
-}
-.right{
-transform:rotateY(90deg)
-translateX(150px);
-transform-origin:right;
-}
-.top{
-transform:rotateX(-90deg)
-translateY(-150px);
-transform-origin:top;
-opacity:1 !important;
-}
-.bottom{
-transform:rotateX(90deg)
-translateY(150px);
-transform-origin:bottom;
-opacity:1 !important;
-}
-@keyframes cube{
-from{transform:rotateY(0);}
-to{transform:rotateY(360deg);}
+
+.featured-flex {
+    display: flex; 
+    justify-content: space-evenly; 
+    flex-wrap: wrap; 
 }
 

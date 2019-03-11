@@ -16,7 +16,7 @@
         height: 1rem; 
         /* border: 0rem solid #fff;  */
         border:none;
-        background-color: #f0f0f0;
+        background-color: #ffff;
         /* border-radius: .5rem;  */
         padding: 1.2rem; 
         outline: none; 
@@ -47,18 +47,14 @@
 }
 
 .input5 {
-    margin-bottom: 1rem; 
-}
-
-.input6 {
-    margin-bottom: 1rem; 
+    margin-bottom: 3rem; 
 }
 
 .newevent-btn {
     text-transform: uppercase; 
     padding: 1rem; 
     font-family: 'Patua One', cursive;
-    border-radius: 2rem; 
+    border-radius: .5rem; 
     font-size: 1rem; 
     background-color: #71A336; 
     color: #fff; 
