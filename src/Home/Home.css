@@ -36,12 +36,23 @@ perspective:1000px;
 
 .home-twitter-align {
     display: flex; 
-    justify-content: center; 
+    justify-content: space-evenly; 
+    flex-wrap: wrap; 
+    margin-bottom: 4rem; 
+}
+
+.home-twitter-top {
+    margin-top: 3rem; 
 }
 
 .featured-flex {
     display: flex; 
     justify-content: space-evenly; 
     flex-wrap: wrap; 
+}
+
+.twit-flex {
+    display: flex; 
+    flex-direction: column; 
 }
 

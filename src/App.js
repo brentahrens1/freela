@@ -18,6 +18,7 @@ import Art from './Art/Art'
 import NewEvent from './NewEvent/NewEvent'
 import EditEvent from './EditPage/EditPage'
 import UserProfile from './UserProfile/UserProfile'
+import Footer from './Footer/Footer'
 
 
 class App extends Component {
@@ -35,13 +36,9 @@ class App extends Component {
        if (currentUser) {
          this.setState({
            currentUser: Object.assign(currentUser.data(), {uid: currentUser.id})
-          }, ()=>{
-            // this.props.history.push("/")
           })
-       } else {
-        //  this.props.history.push("/register")
        }
-        })
+      })
        
       )
   }
@@ -83,6 +80,7 @@ class App extends Component {
           <Route exact path="/event/:id/edit" component={() => <EditEvent/>}/>
           <Route exact path="/profile/:id" component={() => <UserProfile doSetCurrrentUser={this.doSetCurrentUser} currentUser={this.state.currentUser}/>}/>
         </Switch>
+        <Footer/>
       </div>
     );
   }

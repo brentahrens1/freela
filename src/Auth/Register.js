@@ -10,7 +10,7 @@ class Register extends Component {
         username: "",
         email: "",
         password: "",
-        loading: false 
+        loading: false
     }
 
     handleChange = event => {
@@ -26,7 +26,8 @@ class Register extends Component {
             .then(createdUser => {
                 doAddUser(createdUser.user.uid, { 
                     username: this.state.username, 
-                    email: this.state.email 
+                    email: this.state.email,
+                    userImg: "https://image.flaticon.com/icons/svg/74/74472.svg" 
                 })
                 return this.props.history.push('/')
             })

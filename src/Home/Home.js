@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import { withRouter } from 'react-router-dom'
 import './Home.css'
 import TwitterFeedHome from '../TwitterFeedHome/TwitterFeedHome'
+import TwitterFeedHome2 from '../TwitterFeedHome2/TwitterFeedHome2'
+import TwitterFeedHome3 from '../TwitterFeedHome3/TwitterFeedHome3'
 
 
 class Home extends Component {
@@ -58,9 +60,21 @@ class Home extends Component {
             </div>
             </div>
             </div> 
-            <h1 className="home-header">Discover LA</h1>
-            <div className="home-twitter-align">
-              <TwitterFeedHome/>
+            <div className="home-twitter-top">
+              <div className="home-twitter-align">
+              <div className="twit-flex">
+                <h1 className="home-header">Discover LA</h1>
+                  <TwitterFeedHome/>
+              </div>
+              <div className="twit-flex">
+                <h1 className="home-header">the LA Scene</h1>
+                <TwitterFeedHome2/>
+              </div>
+              <div className="twit-flex">
+                <h1 className="home-header">LA Public Library</h1>
+                <TwitterFeedHome3/>
+              </div>
+            </div>
             </div>
         </div>
       </div>      
