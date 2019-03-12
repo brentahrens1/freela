@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './Music.css'
 import EventCard from '../EventCard/EventCard'
 import { doGetMusicEvents } from '../Firebase/Events'
-import TwitterFeedMusic from '../TwitterFeed/TwitterFeed'
+import TwitterFeedMusic from '../TwitterFeedMusic/TwitterFeedMusic'
 
 class Music extends Component {
     state = {

@@ -35,13 +35,9 @@ class App extends Component {
        if (currentUser) {
          this.setState({
            currentUser: Object.assign(currentUser.data(), {uid: currentUser.id})
-          }, ()=>{
-            // this.props.history.push("/")
           })
-       } else {
-        //  this.props.history.push("/register")
        }
-        })
+      })
        
       )
   }

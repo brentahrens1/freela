@@ -30,9 +30,15 @@ class EventCard extends Component {
             <div className="card">
               <img className="card__image card__image--fence" alt="eventimg" src={event.img}/>
               <div className="card__content">
+              <div className="showcard-bottom">
                 <div className="card__title">{event.name}</div>
+              </div>
+              <div className="showcard-bottom">
                 <div className="card__title">{event.date}</div>
+              </div>
+              <div className="showcard-bottom">
                 <p className="card__text">{event.description}</p>
+              </div>
                 <h3 className="card__text">{event.address}</h3>
                 <p className="card__text">Posted by: {this.state.user.username}</p>
                 {this.props.currentUser.uid

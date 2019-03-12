@@ -41,7 +41,8 @@ class UserProfile extends Component {
 
     addBio = e => {
         e.preventDefault()
-        const { userImg, userBio} = this.state
+        let { userImg, userBio} = this.state
+        userImg = userImg.length < 0 ? "http://profilepicturesdp.com/wp-content/uploads/2018/07/profile-pictures-icon-4.jpg" : userImg
         const userBioObj = { 
             ...this.props.currentUser,
             userImg,
