@@ -11,6 +11,10 @@
     align-items: center; 
 }
 
+.newevent-header {
+    font-family: 'Patua One', cursive;
+}
+
 .event-container input {
         width: 15rem; 
         height: 1rem; 

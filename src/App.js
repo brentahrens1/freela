@@ -18,6 +18,7 @@ import Art from './Art/Art'
 import NewEvent from './NewEvent/NewEvent'
 import EditEvent from './EditPage/EditPage'
 import UserProfile from './UserProfile/UserProfile'
+import Footer from './Footer/Footer'
 
 
 class App extends Component {

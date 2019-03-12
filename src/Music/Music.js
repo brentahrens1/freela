@@ -22,7 +22,7 @@ class Music extends Component {
                 </div>
             </div>
             <hr/>
-            <h1 className="upcoming-header">Upcoming Events</h1>
+            <h1 className="upcoming-header">Jam on</h1>
             <hr/>
             <div className="music-flex">
                 {
