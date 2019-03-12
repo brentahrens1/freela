@@ -36,7 +36,8 @@
 
 @media screen and (min-width: 375px) {
     .music-image {
-        height: 20rem; 
+        height: 18rem;
+        margin-right: 0.6rem;
     }
 
 }
