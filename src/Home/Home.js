@@ -27,10 +27,11 @@ class Home extends Component {
                 <img className="card__image card__image--fence" alt="eventimg" src="https://static1.squarespace.com/static/5177ee48e4b054c7ac38cf8b/t/59f099d1f9a61ec0915c05eb/1508940515390/Philip+Portrait04+%282%29+%281%29+%281%29.jpg"/>
               <div className="card__content">
               <div className="card__title">PHILIP COLBERT: HUNT PAINTINGS</div>
+              <div className="card__title">TUE MAR 5 11:00AM - MON MAR 11 6:00PM</div>
               <p className="card__text">On view through March 11th, famed Saatchi Gallery London has a their first pop-up
               gallery in LA through March 11th, taking over the former Taschen Gallery space on Beverly, where they are 
               showing British artist Philip Colbert’s Hunt Paintings, presented by Unit London.</p>
-              <h3 className="card__text">TUE MAR 5 11:00AM - MON MAR 11 6:00PM</h3>
+              <h3 className="card__text">1655 26th St #100, Santa Monica, CA 90404s</h3>
               </div>
             </div>
             </div>

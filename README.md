@@ -21,5 +21,7 @@ I began with extensive wireframing to map out routes, models, and a general look
 * Ability for users to comment on post
 * search bar 
 * rating system for each post 
+* more categories (comedy, style)
+* Make it so you can view others user profiles
 
 

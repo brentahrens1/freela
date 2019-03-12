@@ -5,16 +5,6 @@
     margin-top: 1rem; 
 }
 
-/* .art-banner {
-    text-transform: uppercase;
-    position: absolute;
-    font-size: 4rem; 
-    font-family: 'Patua One', cursive;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
-
 .art-flex {
     display: flex; 
     flex-wrap: wrap; 
@@ -53,4 +43,24 @@
     border-radius: .3rem;
     width: 47rem; 
     height: 30rem; 
+}
+
+@media screen and (min-width: 375px) {
+    .art-image {
+        height: 20rem; 
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+    .art-desc-flex {
+        display: none; 
+    }
+} 
+
+
+@media screen and (min-width: 1300px) {
+    .art-image {
+        height: 30rem; 
+    }
 }

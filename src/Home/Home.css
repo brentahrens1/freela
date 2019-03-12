@@ -56,3 +56,23 @@ perspective:1000px;
     flex-direction: column; 
 }
 
+@media screen and (min-width: 320px) {
+    .splash-header2 {
+        display: none; 
+    }
+    .main-splash-img {
+        margin-bottom: 0; 
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    .splash-header2 {
+        display: initial; 
+    }
+
+    .main-splash-img {
+        margin-bottom: 2rem; 
+    }
+}
+
