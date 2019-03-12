@@ -24,5 +24,6 @@ I began with extensive wireframing to map out routes, models, and a general look
 * more categories (comedy, style)
 * Make it so you can view others user profiles
 * Eventbrite and twitter api
+* local photo uploading
 
 

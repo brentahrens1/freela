@@ -127,7 +127,7 @@ const EditProfileForm = ({showProfile, handleInput, addBio, currentUser}) =>
                 defaultValue={currentUser.userImg}
                 onChange={e => handleInput(e)}
             />
-            <input className="edit-user-input1"
+            <textarea className="edit-user-input2"
                 type="text"
                 name="userBio"
                 placeholder="Bio"

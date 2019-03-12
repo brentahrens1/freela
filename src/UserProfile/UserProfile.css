@@ -60,16 +60,22 @@
     height: 1rem; 
     /* border: 0rem solid #fff;  */
     border:none;
-    background-color: #f0f0f0;
+    background-color: #fff;
     /* border-radius: .5rem;  */
-    padding: 2rem; 
-    margin-bottom: 3rem; 
+    padding: 1.5rem; 
+    margin-bottom: 1rem; 
     outline: none; 
     font-size: 1rem; 
     color: #000;
-    border-bottom: .05rem solid #000;
+    border: .05rem solid #000;
     transition: all .2s
 
+}
+
+.edit-user-input2 {
+    width: 14.9rem; 
+    height: 6rem; 
+    margin-bottom: 2rem;
 }
 
 .edituser-header {
