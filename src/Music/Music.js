@@ -17,7 +17,7 @@ class Music extends Component {
         <div className="music-container">
             <div className="music-banner-flex">
                 <img className="music-image" src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="music"/>
-                <div className="desc-flex">
+                <div className="music-desc-flex">
                         <TwitterFeedMusic/>
                 </div>
             </div>
