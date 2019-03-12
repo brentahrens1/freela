@@ -1,6 +1,6 @@
 # FREE LA  
 **DESCRIPTION -**
-'FREE LA' is a full stack CRUD app built to help fellow Angelinos find free activities in their city. I broke it down into the four categories of music, nature, exercise, and art. 
+'FREE LA' is a full stack CRUD app built to help fellow Angelinos find free activities in their city. I broke it down into the four categories of music, nature, exercise, and art. 'FREE LA' is also responsive on all mobile devices. 
 
 ![GitHub Logo](https://i.imgur.com/eVFCd51.jpg)
 ![GitHub Logo](https://i.imgur.com/D015biY.png)
