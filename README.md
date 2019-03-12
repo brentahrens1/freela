@@ -23,5 +23,6 @@ I began with extensive wireframing to map out routes, models, and a general look
 * rating system for each post 
 * more categories (comedy, style)
 * Make it so you can view others user profiles
+* Eventbrite and twitter api
 
 

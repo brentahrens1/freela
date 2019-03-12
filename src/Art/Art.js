@@ -22,7 +22,7 @@ class Art extends Component {
                 </div>
             </div>
             <hr/>
-            <h1 className="upcoming-header">Art</h1>
+            <h1 className="upcoming-header">Express yourself</h1>
             <hr/>
             <div className="art-flex">
                 {

@@ -22,13 +22,8 @@
     flex-direction: column; 
 }
 
-.music-header {
-    color: #000; 
-    font-family: 'Patua One', cursive;
-}
-
 .upcoming-header {
-    color: #000; 
+    color: #F39A6D; 
     font-family: 'Patua One', cursive;
 }
 

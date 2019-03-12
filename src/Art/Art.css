@@ -22,11 +22,6 @@
     flex-direction: column; 
 }
 
-.art-header {
-    color: #000; 
-    font-family: 'Patua One', cursive;
-}
-
 .desc-art {
     color: #000; 
     width: 40rem; 
@@ -34,7 +29,7 @@
 }
 
 .upcoming-header {
-    color: #000; 
+    color: #F39A6D; 
     font-family: 'Patua One', cursive;
 }
 

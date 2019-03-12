@@ -22,7 +22,7 @@ class Nature extends Component {
                 </div>
             </div>
             <hr/>
-            <h1 className="upcoming-header">All that nature has to offer</h1>
+            <h1 className="upcoming-header">Run Free Run Wild</h1>
             <hr/>
             <div className="nature-flex">
                 {

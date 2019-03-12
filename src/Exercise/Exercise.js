@@ -22,7 +22,7 @@ class Exercise extends Component {
                 </div>
             </div>
             <hr/>
-            <h1 className="upcoming-header">Exercise</h1>
+            <h1 className="upcoming-header">Time to get active</h1>
             <hr/>
             <div className="exercise-flex">
                 {
