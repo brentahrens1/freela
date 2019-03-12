@@ -10,7 +10,7 @@ class UserProfile extends Component {
 
     state = {
         events: [],
-        userImg: this.props.currentUser.userImg ||"http://profilepicturesdp.com/wp-content/uploads/2018/07/profile-pictures-icon-4.jpg",
+        userImg: this.props.currentUser.userImg ||"https://image.flaticon.com/icons/svg/118/118781.svg",
         userBio: this.props.currentUser.userBio,
         showEditForm: false
     }
@@ -42,7 +42,7 @@ class UserProfile extends Component {
     addBio = e => {
         e.preventDefault()
         let { userImg, userBio} = this.state
-        userImg = userImg.length < 0 ? "http://profilepicturesdp.com/wp-content/uploads/2018/07/profile-pictures-icon-4.jpg" : userImg
+        userImg = userImg.length < 0 ? "https://image.flaticon.com/icons/svg/118/118781.svg" : userImg
         const userBioObj = { 
             ...this.props.currentUser,
             userImg,
