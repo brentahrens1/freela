@@ -73,11 +73,11 @@ class UserProfile extends Component {
                                 <p className="profile-description">{this.props.currentUser.userBio}</p>
                                 <button className="profileedit-btn" onClick={() => this.setState({showEditForm: !this.state.showEditForm})}>Edit Profile</button>
                             </div>
-                            <h1 className="profile-header">Your upcoming events</h1>
+                            <h1 className="profile-header2">Your upcoming events</h1>
                             <div className="profile-flex">
                             {
-                                this.state.events.map(e =>
-                                    <div>
+                                this.state.events.map((e, i) =>
+                                    <div key={i}>
                                         <div className="cards__item">
                                             <div className="card">
                                                     <img className="card__image card__image--fence" alt="eventimg" src={e.img}/>
@@ -128,7 +128,6 @@ const EditProfileForm = ({showProfile, handleInput, addBio, currentUser}) =>
             />
             <button className="profileedit-btn" type="submit">Submit</button>
         </form>
-        <button onClick={showProfile}>show profile</button>
     </div>
 
 export default withRouter(UserProfile)

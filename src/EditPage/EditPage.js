@@ -14,7 +14,6 @@ class EditEvent extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.match.params.id)
         doGetOneEvent(this.props.match.params.id) 
             .then(snapShot => {
                 this.setState({
@@ -32,7 +31,7 @@ class EditEvent extends Component {
             }
         })
     }
-
+ 
     handleSubmit = (e) => {
         e.preventDefault();
         doEditEvents(this.state.event, this.props.match.params.id)

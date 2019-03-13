@@ -16,7 +16,7 @@ class NewEvent extends Component {
         address: "",
         createdby: "",
         img: null
-    }
+    } 
 
     handleInput(e) {
         this.setState({
