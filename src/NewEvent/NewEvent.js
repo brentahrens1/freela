@@ -11,7 +11,6 @@ class NewEvent extends Component {
     state = {
         name: "",
         category: "Music",
-        img: "",
         description: "",
         date: "",
         address: "",
@@ -56,19 +55,20 @@ class NewEvent extends Component {
 
     render() {
         console.log(this.state)
-        const { name, date, description, address, img} = this.state
+        const { name, date, description, address} = this.state
         return(
             <div className="event-container">
                 <form className="input-flex" onSubmit={this.handleSubmit}>
-                    <h1 className="newevent-header">Select Category</h1>
+                    <p className="newevent-header">Select Category</p>
                     <select className="select-menu" name='category' onChange={this.handleInput.bind(this)}>
                         <option>Music</option>
                         <option>Nature</option>
                         <option>Exercise</option>
                         <option>Art</option>
                     </select>
+                    <p className="picture-upload">upload image</p>
+                    <input id="file-upload" className="input2" onChange={this.handleFile.bind(this)} type="file" name="img"/>
                     <input className="input1" onChange={this.handleInput.bind(this)} type="text" name="name" placeholder="name" value={name}/>
-                    <input className="input2" onChange={this.handleFile.bind(this)} type="file" name="img"/>
                     <input className="input3" onChange={this.handleInput.bind(this)} type="text" name="date" placeholder="date" value={date}/>
                     <input className="input4" onChange={this.handleInput.bind(this)} type="text" name="description" placeholder="description" value={description}/>
                     <input className="input5" onChange={this.handleInput.bind(this)} type="text" name="address" placeholder="address" value={address}/>

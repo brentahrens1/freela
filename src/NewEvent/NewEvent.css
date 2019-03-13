@@ -13,6 +13,13 @@
 
 .newevent-header {
     font-family: 'Patua One', cursive;
+    font-size: 1.5rem; 
+}
+
+.picture-upload {
+    margin-bottom: 0; 
+    font-family: 'Patua One', cursive;
+    font-size: 1.5rem; 
 }
 
 .event-container input {
@@ -30,6 +37,12 @@
         transition: all .2s
 }
 
+#file-upload {
+    border: none !important;
+    margin-top: 0; 
+    color: #fff;
+    margin-left: 6rem;
+}
 .select-menu {
     margin-bottom: 1rem; 
 }
