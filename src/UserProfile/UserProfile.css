@@ -20,7 +20,7 @@
 .profile-img {
     border-radius: 2rem;
     border: 1px solid #000; 
-    width: 193px; 
+    width: 200px; 
     height: 200px; 
     margin-bottom: 2rem; 
 }
@@ -72,24 +72,24 @@
 .edit-user-input1 {
     width: 15rem; 
     height: 1rem; 
-    /* border: 0rem solid #fff;  */
-    border:none;
     background-color: #fff;
-    /* border-radius: .5rem;  */
     padding: 1.5rem; 
     margin-bottom: 1rem; 
     outline: none; 
     font-size: 1rem; 
     color: #000;
     border: .05rem solid #000;
+    border-radius: .5rem; 
     transition: all .2s
-
 }
+
+
 
 .edit-user-input2 {
     width: 14.9rem; 
     height: 6rem; 
     margin-bottom: 2rem;
+    border-radius: .5rem; 
 }
 
 .edituser-header {
