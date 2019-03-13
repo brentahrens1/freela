@@ -15,6 +15,11 @@
     font-family: 'Patua One', cursive;
 }
 
+.picture-upload {
+    margin-bottom: 0; 
+    font-family: 'Patua One', cursive;
+}
+
 .event-container input {
         width: 15rem; 
         height: 1rem; 
@@ -30,6 +35,12 @@
         transition: all .2s
 }
 
+#file-upload {
+    border: none !important;
+    margin-top: 0; 
+    color: #fff;
+    margin-left: 6rem;
+}
 .select-menu {
     margin-bottom: 1rem; 
 }
