@@ -13,11 +13,13 @@
 
 .newevent-header {
     font-family: 'Patua One', cursive;
+    font-size: 1.5rem; 
 }
 
 .picture-upload {
     margin-bottom: 0; 
     font-family: 'Patua One', cursive;
+    font-size: 1.5rem; 
 }
 
 .event-container input {

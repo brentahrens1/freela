@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
-import { doDeleteEvent, doUpdateUserInfo } from '../Firebase/Users'
+import { doDeleteEvent, doUpdateUserInfo, doGetUserEvents } from '../Firebase/Users'
 import './UserProfile.css'
 
 
@@ -16,7 +16,8 @@ class UserProfile extends Component {
     }
 
     componentDidMount() {
-
+        doGetUserEvents(this.props.match.params.id)
+            .then(events => this.setState({ events }))
     }
 
     deleteEvent = (userId, eventId) => {
@@ -112,7 +113,7 @@ const EditProfileForm = ({showProfile, handleInput, addBio, currentUser}) =>
         <form className="edit-user-container" onSubmit={e => addBio(e)}>
             <h1 className="edituser-header">User Profile</h1>
             <input className="edit-user-input1"
-                type="file"
+                type="text"
                 name="userImg"
                 placeholder="profile pic"
                 defaultValue={currentUser.userImg}
@@ -127,7 +128,7 @@ const EditProfileForm = ({showProfile, handleInput, addBio, currentUser}) =>
             />
             <button className="profileedit-btn" type="submit">Submit</button>
         </form>
-        {/* <button onClick={showProfile}>show profile</button> */}
+        <button onClick={showProfile}>show profile</button>
     </div>
 
 export default withRouter(UserProfile)
