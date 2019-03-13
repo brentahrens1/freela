@@ -1,6 +1,26 @@
 import { db } from './Firebase'
+import { storage } from '../Firebase/Firebase'
 
 const eventsRef = db.collection('events')
+
+const storageRef = storage.ref() 
+
+export const doAddStoreFile = (file) =>
+    storageRef
+        .child(file.name)
+        .put(file)
+
+export const doUpdateEventPic = (id, name) =>
+// console.log(id,name)
+    eventsRef
+        .doc(id)
+        .update({ fileRef: name})
+
+export const getEventPic = (name) =>
+    storageRef
+        .child(name)
+        .getDownloadURL() 
+        .then( file => file)
 
 export const doCreateEvent = (data) =>
     eventsRef
