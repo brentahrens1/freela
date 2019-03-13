@@ -10,12 +10,6 @@ export const doAddStoreFile = (file) =>
         .child(file.name)
         .put(file)
 
-export const doUpdateEventPic = (id, name) =>
-// console.log(id,name)
-    eventsRef
-        .doc(id)
-        .update({ fileRef: name})
-
 export const getEventPic = (name) =>
     storageRef
         .child(name)

@@ -5,11 +5,6 @@ const userRef = db.collection("users")
 
 const storageRef = storage.ref() 
 
-export const doAddStoreFile = (file) =>
-    storageRef
-        .child(file.name)
-        .put(file)
-
 export const doUpdateUserPic = (id, name) =>
 // console.log(id,name)
     userRef
