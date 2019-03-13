@@ -26,8 +26,8 @@ class Nature extends Component {
             <hr/>
             <div className="nature-flex">
                 {
-                    this.state.events.map(e => 
-                        <EventCard event={e} currentUser={this.props.currentUser}/>
+                    this.state.events.map((e, i) => 
+                        <EventCard event={e} key={i} currentUser={this.props.currentUser}/>
                     )
                 }
             </div>

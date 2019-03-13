@@ -1,6 +1,20 @@
 import { db } from "../Firebase/Firebase";
+import { storage } from '../Firebase/Firebase'
 
 const userRef = db.collection("users")
+
+const storageRef = storage.ref() 
+
+export const doUpdateUserPic = (id, name) =>
+// console.log(id,name)
+    userRef
+        .doc(id)
+        .update({ fileRef: name})
+
+export const getUserPic = (name) =>
+    storageRef
+        .child(name)
+        .getDownloadURL() 
 
 export const doAddUser = (id, user) =>
     userRef
@@ -36,3 +50,4 @@ export const doUpdateUserInfo = (id, data) =>
     userRef
         .doc(id)
         .update(data)
+

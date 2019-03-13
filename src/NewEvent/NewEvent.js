@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { withRouter } from 'react-router-dom'
 
-import { doCreateEvent } from '../Firebase/Events'
+import { doCreateEvent, doAddStoreFile } from '../Firebase/Events'
 import './NewEvent.css'
 
 
@@ -15,7 +15,8 @@ class NewEvent extends Component {
         description: "",
         date: "",
         address: "",
-        createdby: ""
+        createdby: "",
+        img: null
     }
 
     handleInput(e) {
@@ -25,16 +26,36 @@ class NewEvent extends Component {
         })
     }
 
-    handleSubmit = async (e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
-        const data = Object.assign(this.state, {createdby: this.props.currentUser.uid})
-        doCreateEvent(this.state)
-            .then(snapShot => console.log(snapShot))
-            this.props.history.push(`/${this.state.category}`)
+        const data = Object.assign(this.state, {createdby: this.props.currentUser.uid || ''})
+        this.state.img
+            ? doAddStoreFile(this.state.img)
+                .then(img => img.ref.getDownloadURL())
+                .then(url => {
+                    const addedUrl = Object.assign(data, {img: url})
+                    doCreateEvent(addedUrl)
+                        .then(snapShot => {
+                            this.props.history.push(`/${this.state.category}`)
+                        })
+                    
+                })
+            : console.log('no file')
+        // doCreateEvent(data)
+        //     .then(snapShot => {
+        //         this.props.history.push(`/${this.state.category}`)
+            // })
+            
     }
     
+    handleFile = (e) => {
+        this.setState({
+            img: e.target.files[0]
+        })
+    }
 
     render() {
+        console.log(this.state)
         const { name, date, description, address, img} = this.state
         return(
             <div className="event-container">
@@ -47,7 +68,7 @@ class NewEvent extends Component {
                         <option>Art</option>
                     </select>
                     <input className="input1" onChange={this.handleInput.bind(this)} type="text" name="name" placeholder="name" value={name}/>
-                    <input className="input2" onChange={this.handleInput.bind(this)} type="text" name="img" placeholder="picture" value={img}/>
+                    <input className="input2" onChange={this.handleFile.bind(this)} type="file" name="img"/>
                     <input className="input3" onChange={this.handleInput.bind(this)} type="text" name="date" placeholder="date" value={date}/>
                     <input className="input4" onChange={this.handleInput.bind(this)} type="text" name="description" placeholder="description" value={description}/>
                     <input className="input5" onChange={this.handleInput.bind(this)} type="text" name="address" placeholder="address" value={address}/>

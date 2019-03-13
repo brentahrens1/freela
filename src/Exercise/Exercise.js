@@ -26,8 +26,8 @@ class Exercise extends Component {
             <hr/>
             <div className="exercise-flex">
                 {
-                    this.state.events.map(e => 
-                        <EventCard event={e} currentUser={this.props.currentUser}/>
+                    this.state.events.map((e, i) => 
+                        <EventCard event={e} key={i} currentUser={this.props.currentUser}/>
                     )
                 }
             </div>
