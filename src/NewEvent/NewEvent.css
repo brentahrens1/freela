@@ -14,6 +14,7 @@
 .newevent-header {
     font-family: 'Patua One', cursive;
     font-size: 1.5rem; 
+    margin-bottom: 1rem; 
 }
 
 .picture-upload {
@@ -42,6 +43,7 @@
     margin-top: 0; 
     color: #fff;
     margin-left: 6rem;
+    margin-bottom: 2rem; 
 }
 .select-menu {
     margin-bottom: 1rem; 
