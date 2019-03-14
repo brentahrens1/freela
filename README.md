@@ -24,8 +24,8 @@ I began with extensive wireframing to map out routes, models, and a general look
 * search bar 
 * rating system for each post 
 * more categories (comedy, style)
-* Make it so you can view others user profiles
+* Make it so you can view other user profiles.
 * Eventbrite and twitter api
-* local photo uploading
+* local photo uploading for edit and profile pic
 
 

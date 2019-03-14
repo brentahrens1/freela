@@ -17,7 +17,7 @@ export const getEventPic = (name) =>
         .then( file => file)
 
 export const doCreateEvent = (data) =>
-    eventsRef
+    eventsRef 
         .add(data)
 
 export const doGetMusicEvents = () =>
