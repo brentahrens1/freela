@@ -32,7 +32,7 @@
     justify-content: center; 
     align-items: center; 
     background-size: cover; 
-    background-image: url('https://images.unsplash.com/photo-1455245737663-3edc3b61dd1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+    /* background-image: url('https://images.unsplash.com/photo-1455245737663-3edc3b61dd1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'); */
 }
 
 .profileedit-btn {
@@ -55,14 +55,14 @@
     width: 20rem; 
     font-size: 1.3rem; 
     text-align: center; 
-    margin-bottom: 3rem; 
+    margin-bottom: 1rem; 
     text-align: center; 
 }
 
 .edit-user-container {
     background-size: cover; 
     margin-top: -1rem; 
-    background-image: url('https://i.imgur.com/FiWUjk8.png');
+    /* background-image: url('https://i.imgur.com/FiWUjk8.png'); */
     height: 100vh; 
 }
 
@@ -82,7 +82,7 @@
     outline: none; 
     font-size: 1rem; 
     color: #000;
-    border: .05rem solid #fff;
+    border: .05rem solid #000;
     border-radius: .5rem; 
     transition: all .2s
 }
@@ -91,7 +91,7 @@
     width: 14.9rem; 
     height: 6rem; 
     margin-bottom: 2rem;
-    border: .05rem solid #fff;
+    border: .05rem solid #000;
     border-radius: .5rem; 
     margin-top: 1rem; 
 }
