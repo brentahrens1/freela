@@ -109,8 +109,8 @@ class UserProfile extends Component {
 
 
 const EditProfileForm = ({showProfile, handleInput, addBio, currentUser}) =>
-    <div>
-        <form className="edit-user-container" onSubmit={e => addBio(e)}>
+    <div className="edit-user-container">
+        <form className="edit-user-form" onSubmit={e => addBio(e)}>
             <h1 className="edituser-header">User Profile</h1>
             <input className="edit-user-input1"
                 type="text"

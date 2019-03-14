@@ -22,6 +22,7 @@
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
+    margin-top: 5rem; 
 }
 
 .register-btn {
@@ -30,9 +31,9 @@
     font-family: 'Patua One', cursive;
     border-radius: .5rem; 
     font-size: 1rem; 
-    background-color: #71A336; 
+    background-color: #CEA784; 
     color: #fff; 
-    border: 0 solid #71A336; 
+    border: 0 solid #CEA784; 
     width: 10rem; 
     outline: none; 
 }

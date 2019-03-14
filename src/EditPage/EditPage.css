@@ -63,9 +63,9 @@
     font-family: 'Patua One', cursive;
     border-radius: .5rem; 
     font-size: 1rem; 
-    background-color: #71A336; 
+    background-color: #CEA784; 
     color: #fff; 
-    border: 0 solid #71A336; 
+    border: 0 solid #CEA784; 
     width: 10rem; 
     outline: none; 
     margin-bottom: 1rem; 
@@ -83,4 +83,8 @@
     outline: none; 
     margin-bottom: 1rem; 
     color: #fff; 
+}
+
+.edit-header {
+    font-family: 'Patua One', cursive;
 }

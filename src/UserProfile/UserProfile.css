@@ -41,9 +41,9 @@
     font-family: 'Patua One', cursive;
     border-radius: .5rem; 
     font-size: 1rem; 
-    background-color: #71A336; 
+    background-color: #CEA784; 
     color: #fff; 
-    border: 0 solid #71A336; 
+    border: 0 solid #CEA784; 
     width: 10rem; 
     outline: none; 
     margin-bottom: 5rem; 
@@ -53,20 +53,24 @@
 .profile-description {
     font-family: 'Patua One', cursive;
     width: 20rem; 
+    font-size: 1.3rem; 
     text-align: center; 
     margin-bottom: 3rem; 
     text-align: center; 
 }
 
 .edit-user-container {
+    background-size: cover; 
+    margin-top: -1rem; 
+    background-image: url('https://i.imgur.com/FiWUjk8.png');
+    height: 100vh; 
+}
+
+.edit-user-form {
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
-    align-items: center; 
-    background-size: cover; 
-    margin-top: -1rem; 
-    background-image: url('https://images.unsplash.com/photo-1499561385668-5ebdb06a79bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80');
-    height: 100vh; 
+    align-items: center;
 }
 
 .edit-user-input1 {
@@ -74,25 +78,26 @@
     height: 1rem; 
     background-color: #fff;
     padding: 1.5rem; 
-    margin-bottom: 1rem; 
+    margin-top: 1rem; 
     outline: none; 
     font-size: 1rem; 
     color: #000;
-    border: .05rem solid #000;
+    border: .05rem solid #fff;
     border-radius: .5rem; 
     transition: all .2s
 }
-
-
 
 .edit-user-input2 {
     width: 14.9rem; 
     height: 6rem; 
     margin-bottom: 2rem;
+    border: .05rem solid #fff;
     border-radius: .5rem; 
+    margin-top: 1rem; 
 }
 
 .edituser-header {
     font-family: 'Patua One', cursive;
     text-align: center; 
+    margin-top: 4rem !important;
 }

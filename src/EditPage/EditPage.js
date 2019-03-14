@@ -56,7 +56,7 @@ class EditEvent extends Component {
         return(
             <div className="edit-container">
                 <form className="input-flex" onSubmit={this.handleSubmit}>
-                    <h1>Edit Event</h1>
+                    <h1 className="edit-header">Edit Event</h1>
                     <input className="input1" onChange={this.handleInput} type="text" name="name" placeholder="name" defaultValue={name}/>
                     <input className="input2" onChange={this.handleInput} type="text" name="img" placeholder="picture" defaultValue={img}/>
                     <input className="input4" onChange={this.handleInput} type="text" name="date" placeholder="date" defaultValue={date}/>
