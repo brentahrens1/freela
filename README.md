@@ -15,6 +15,8 @@
 **GETTING STARTED -** 
 I began with extensive wireframing to map out routes, models, and a general look and layout for the site. Next I set up my firestore db and connected it to React to make sure I was able to send data from the front end and see it on the backend. 
 
+![GitHub Logo](https://i.imgur.com/QkZ2uyh.jpg)
+
 **BIGGEST CHALLENGE -** Working with a new database. Especially Firestore which is fairly new without a ton of reference points online. 
 
 **FUTURE PLANS -**
