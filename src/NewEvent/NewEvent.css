@@ -40,10 +40,14 @@
 
 #file-upload {
     border: none !important;
+    margin-left: 1rem;  
+    border-radius: .5rem; 
+    font-family: 'Patua One', cursive;
+    width: 17rem; 
+    height: 3rem; 
     margin-top: 0; 
-    color: #fff;
-    margin-left: 6rem;
-    margin-bottom: 2rem; 
+    color: #000;
+    margin-bottom: 1rem; 
 }
 .select-menu {
     margin-bottom: 1rem; 
